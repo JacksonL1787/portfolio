@@ -1,0 +1,30 @@
+[
+    {
+        "title": "Markdown",
+        "runner": "Enchancing Your Retail Shopping Experience",
+        "s3Folder": "markdown",
+        "logo": "markdown.png",
+        "imgs": [
+            "header-web-display.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacksonL1787/markdown",
+            "website": "https://www.teammarkdown.com"
+        }
+    },
+    {
+        "title": "Koistream",
+        "runner": "Connecting Our Community During COVID-19",
+        "s3Folder": "koistream",
+        "logo": "logo.png",
+        "imgs": [
+            "koistream-demo.png",
+            "koistream-login-page.png",
+            "stream-page-dark-mode.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacksonL1787/community-broadcaster",
+            "website": "https://community.designtechhs.com"
+        }
+    }
+]

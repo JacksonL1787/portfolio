@@ -1,0 +1,89 @@
+html
+	head
+		title Jackson Lawrence
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="/css/main.css")
+		link(rel="stylesheet" href="/css/index.css")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+		script.
+			let projectsRaw = "#{projects}"
+			if(projectsRaw) {
+				window.projects = JSON.parse(projectsRaw.replace(/&quot;/g,'"'))
+			}
+	body
+		.modal-overlay
+		.fullscreen-image-container
+			.close-btn
+				.icon
+			img
+		.modal.about-modal
+			.modal-top
+				.close-btn
+				.profile-contianer
+					.profile-picture
+					h1.name Jackson Lawrence
+			.modal-content
+				p.label About
+				p.text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla vehicula sem, a scelerisque lacus ullamcorper ac. Integer eget commodo diam. Sed accumsan, risus et volutpat feugiat, dolor lorem lobortis diam, id eleifend arcu orci a eros. Praesent in quam vel lectus elementum efficitur. Fusce quis est id est gravida mollis. Curabitur bibendum eu leo eu dignissim. Morbi non hendrerit mi. Aliquam tempor bibendum mauris, vel fringilla erat bibendum in. Suspendisse a egestas nulla, at bibendum sem. Mauris a venenatis quam. Aliquam eget odio sapien.
+				.download-resume
+					a(href="/files/Jackson_Lawrence_Resume.pdf" download="Jackson Lawrence Resume") Download My Resume
+					.icon
+		.modal.project-info-modal
+			.modal-top
+				.close-btn
+				.title-wrap
+					.logo
+					p
+			.pictures-container
+				h1.no-pictures No Pictures
+				.change-img-wrap
+					.previous-btn
+					.next-btn
+				.img-wrap
+					.fullscreen-btn
+						.icon
+					img.current-img
+			.modal-content
+				.links-wrap
+					a.link.github(target="_blank")
+						.logo(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/github.svg);")
+						p Go To Repository
+					a.link.website(target="_blank")
+						.logo(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/website-icon.svg);")
+						p Go To Website
+		.splash-container
+			.sm-wrap
+				.icon.github(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/github.svg);")
+				.icon.linkedin(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/linkedin.svg);")
+				.icon.instagram(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/instagram.svg);")
+				.icon.email(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/email.svg);")
+			.header
+				.left
+					h1.name Jackson Lawrence
+					.flex-wrap
+						p.subtitle Full Stack Web Developer
+						.about
+							p About
+							.icon
+			.down-arrow
+		.projects-container
+			.top-container
+				.up-arrow
+			.project-container
+				.project-content
+					.project-basic-info-container
+						.project-title
+							.logo
+							h1
+						.divider
+						.project-basic-info-content
+							h2.runner
+							.info-btn
+								p Info
+								.icon
+					.project-pictures-container
+						img.picture
+			.projects-select-container
+				h1.title Projects
+				.select-wrap
+	script(src="/js/index.js")
