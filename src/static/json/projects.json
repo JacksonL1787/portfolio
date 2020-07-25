@@ -1,7 +1,7 @@
 [
     {
         "title": "Markdown",
-        "runner": "Enchancing Your Retail Shopping Experience",
+        "runner": "Enhancing Your Retail Shopping Experience",
         "s3Folder": "markdown",
         "logo": "markdown.png",
         "imgs": [
@@ -25,6 +25,52 @@
         "links": {
             "github": "https://github.com/JacksonL1787/community-broadcaster",
             "website": "https://community.designtechhs.com"
+        }
+    },
+    {
+        "title": "Branch",
+        "runner": "Combining IOT Technology And School Security",
+        "s3Folder": "branch",
+        "logo": "branch.svg",
+        "imgs": [
+            "page1.png",
+            "page2.png",
+            "page3.png",
+            "page4.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacksonL1787/Branch"
+        }
+    },
+    {
+        "title": "TEDxDTHS",
+        "runner": "2020 TEDx Design Tech High School Event Ticketing System",
+        "s3Folder": "tedx",
+        "logo": "logo.png",
+        "imgs": [
+            "page1.png",
+            "page2.png",
+            "page3.png",
+            "page4.png",
+            "page5.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacksonL1787/ticketing-tedxdesigntech"
+        }
+    },
+    {
+        "title": "Hill & Valley",
+        "runner": "Non-Profit Womens Club Based In Hayward, California",
+        "s3Folder": "hillvalley",
+        "logo": "logo.png",
+        "imgs": [
+            "page1.jpg",
+            "page2.png",
+            "page3.png"
+        ],
+        "links": {
+            "github": "https://github.com/JacksonL1787/hill-valley",
+            "website": "http://hillvalley.club"
         }
     }
 ]

@@ -8,7 +8,7 @@ const jsonfile = require('jsonfile')
 router.get('/', function(req, res, next) {
     jsonfile.readFile('./bin/json/projects.json', (e,i) => {
         if(e) console.log(e);
-         res.render('index', {projects: JSON.stringify(i)})
+        res.render('index', {projects: JSON.stringify(i)})
     })
 });
 

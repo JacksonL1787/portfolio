@@ -122,7 +122,7 @@ $(() => { // Projects Page
                     opacity: 1,
                     marginLeft: "+=10"
                 }, 300)
-            }, 200)
+            }, 400)
         })
         $(".project-container .project-pictures-container .picture").animate({
             marginTop: "+=10",
@@ -134,7 +134,7 @@ $(() => { // Projects Page
                     opacity: 1,
                     marginTop: "+=10"
                 }, 300)
-            }, 200)
+            }, 400)
         })
         let dividerWidth = $(".project-container .project-basic-info-container .divider")[0].clientWidth
         $(".project-container .project-basic-info-container .divider").animate({
@@ -144,13 +144,13 @@ $(() => { // Projects Page
                 $(".project-container .project-basic-info-container .divider").animate({
                     width: dividerWidth
                 })
-            }, 200)
+            }, 400)
         })
         setTimeout(() => {
             setInfo(data,index)
             setTimeout(() => {
                 projectTransition = false;
-            }, 600)
+            }, 750)
         }, 350)
     }
 
@@ -318,6 +318,18 @@ $(() => { // Project Modal
         }
         $(".project-info-modal .pictures-container .current-img").attr("src", s3Link + imgs[imgIndex]).attr("data-img-index", "" + imgIndex)
     })
+
+    $(document).keydown((e) => {
+        const kc = e.keyCode
+        if(!$(".project-info-modal").hasClass("active") || page != 1) return;
+        if(kc === 39) {
+            $(`.project-info-modal .pictures-container .change-img-wrap .previous-btn`).click();
+        }
+        if(kc === 37) {
+            $(`.project-info-modal .pictures-container .change-img-wrap .next-btn`).click();
+        }
+    })
+
 
     $(".info-btn").click(function() {
         const i = $(this).attr("data-project")

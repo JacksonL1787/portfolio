@@ -8,7 +8,7 @@ html
 		script.
 			let projectsRaw = "#{projects}"
 			if(projectsRaw) {
-				window.projects = JSON.parse(projectsRaw.replace(/&quot;/g,'"'))
+				window.projects = JSON.parse(projectsRaw.replace(/&quot;/g,'"').replace(/&amp;/g,'&'))
 			}
 	body
 		.modal-overlay
@@ -72,15 +72,16 @@ html
 			.project-container
 				.project-content
 					.project-basic-info-container
-						.project-title
-							.logo
-							h1
-						.divider
-						.project-basic-info-content
-							h2.runner
-							.info-btn
-								p Info
-								.icon
+						.basic-info-content
+							.project-title
+								.logo
+								h1
+							.divider
+							.project-basic-info-content
+								h2.runner
+								.info-btn
+									p Info
+									.icon
 					.project-pictures-container
 						img.picture
 			.projects-select-container

@@ -376,7 +376,7 @@ body
 		.icon
 			background-size cover
 			background-repeat no-repeat
-			bkacgorund-position center
+			background-position center
 			width 22px
 			cursor pointer
 			height 22px
@@ -408,70 +408,82 @@ body
 			width 90%
 			margin 0 auto
 			padding 100px 0 20px
-			height calc(100% - 80px)
 			display flex
 			justify-content space-between
+			align-items center
 			position relative
+			max-width 1875px
 			.project-basic-info-container
-				.project-title
-					display flex
-					justify-content left
-					align-items center
-					width fit-content
-					margin-left 10px
-					.logo
-						background-size cover
-						background-position center
-						background-repeat no-repeat
-						width 45px
-						height 45px
-						margin-right 20px
-					h1
-						font-size 35px
-						letter-spacing .3px
-						color #fff
-						margin 4px 0 0
-				.divider
-					background rgba(255,255,255,0.15)
-					width 400px
-					height 1px
-					margin 15px 0
-				.project-basic-info-content
-					margin-left 10px
-					.runner
-						color #fff
-						letter-spacing .5px
-						font-size 50px
-						font-weight 200
-					.info-btn
+				margin-right 40px
+				width 55%
+				height fit-content
+				position relative
+				.basic-info-content
+					.project-title
 						display flex
 						justify-content left
 						align-items center
-						cursor pointer
-						margin-top 20px
-						opacity 0.6
 						width fit-content
-						transition opacity .3s
-						&:hover
-							opacity 1
-						p
-							color white
-							font-weight 400
-							font-size 20px
-							letter-spacing .5px
-						.icon
-							background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/white-right-arrow.svg")
+						margin-left 10px
+						.logo
 							background-size cover
-							background-repeat no-repeat
 							background-position center
-							width 25px
-							height 25px
-							margin-left 10px
-							margin-top 1px
+							background-repeat no-repeat
+							width 45px
+							height 45px
+							margin-right 20px
+						h1
+							font-size 35px
+							letter-spacing .3px
+							color #fff
+							margin 4px 0 0
+					.divider
+						background rgba(255,255,255,0.15)
+						width 400px
+						height 1px
+						margin 15px 0
+					.project-basic-info-content
+						margin-left 10px
+						.runner
+							color #fff
+							letter-spacing .5px
+							font-size 50px
+							font-weight 200
+						.info-btn
+							display flex
+							justify-content left
+							align-items center
+							cursor pointer
+							margin-top 20px
+							opacity 0.6
+							width fit-content
+							transition opacity .3s
+							&:hover
+								opacity 1
+							p
+								color white
+								font-weight 400
+								font-size 20px
+								letter-spacing .5px
+							.icon
+								background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/white-right-arrow.svg")
+								background-size cover
+								background-repeat no-repeat
+								background-position center
+								width 25px
+								height 25px
+								margin-left 10px
+								margin-top 1px
 			.project-pictures-container
 				height 100%
+				width calc(45% - 40px)
+				height fit-content
+				position relative
 				.picture
-					width 700px
+					width 100%
+					position absolute
+					top 50%
+					transform translateY(-50%)
 	.projects-select-container
 		position absolute
 		bottom 0
