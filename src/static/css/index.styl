@@ -13,6 +13,7 @@ body
 	background black
 	width 100vw
 	height 100vh
+	height: calc(var(--vh, 1vh) * 100)
 	top 0
 	left 0
 	position fixed
@@ -60,6 +61,7 @@ body
 	top 0
 	left 0
 	height 100vh
+	height: calc(var(--vh, 1vh) * 100)
 	width 100vw
 	background rgba(255,255,255,0.05)
 	z-index 200
@@ -279,7 +281,9 @@ body
 			letter-spacing .3px
 			line-height 180%
 			width calc(100% - 40px)
-			margin 10px 0 0 20px
+			margin 10px 0 10px 20px
+		.about-me-p
+			margin-top 0 !important
 		.download-resume
 			display flex
 			align-items center
@@ -379,6 +383,7 @@ body
 			background-position center
 			width 22px
 			cursor pointer
+			display block
 			height 22px
 			margin 30px 0
 			opacity 0.5
@@ -439,7 +444,8 @@ body
 							margin 4px 0 0
 					.divider
 						background rgba(255,255,255,0.15)
-						width 400px
+						width 100%
+						max-width 400px
 						height 1px
 						margin 15px 0
 					.project-basic-info-content
@@ -525,6 +531,40 @@ body
 					font-weight 800
 					transition color .3s
 
+@media only screen and (max-width: 1300px)
+	.basic-info-content
+		.project-title
+			.logo
+				width 40px !important
+				height 40px !important
+			h1
+				font-size 30px !important
+		.runner
+			font-size 40px !important
+		.info-btn
+			p
+				font-size 19px !important
+			.icon
+				width 22px
+				height 22px
+
+@media only screen and (max-width: 1100px)
+	.basic-info-content
+		.project-title
+			.logo
+				width 35px !important
+				height 35px !important
+			h1
+				font-size 25px !important
+		.runner
+			font-size 34px !important
+		.info-btn
+			p
+				font-size 18px !important
+			.icon
+				width 20px
+				height 20px
+
 @media only screen and (max-width: 1000px)
 	.header
 		left 50% !important
@@ -540,6 +580,23 @@ body
 		justify-content center
 		.icon
 			margin 0 30px !important
+
+@media only screen and (max-width: 900px)
+	.project-pictures-container
+		display none
+	.project-basic-info-container
+		width 100% !important
+		margin 0 !important
+		.project-title
+			margin 0 auto !important
+		.divider
+			margin 15px auto !important
+		.project-basic-info-content
+			margin 0 !important
+		.runner
+			text-align center !important
+		.info-btn
+			margin 20px auto !important
 
 @media only screen and (max-width: 750px)
 	.about-modal
@@ -606,6 +663,25 @@ body
 		.modal-content
 			height calc(100% - 160px)
 
+@media only screen and (max-width: 500px)
+	.basic-info-content
+		.project-title
+			.logo
+				width 30px !important
+				height 30px !important
+			h1
+				font-size 22px !important
+		.divider
+			width 300px
+		.runner
+			font-size 30px !important
+		.info-btn
+			p
+				font-size 17px !important
+			.icon
+				width 18px
+				height 18px
+
 @media only screen and (max-height: 450px) //HEIGHT MEDIA QUERY
 	.sm-wrap
 		margin 0 auto 50px !important
@@ -639,6 +715,23 @@ body
 				height 16px !important
 
 @media only screen and (max-width: 350px)
+	.basic-info-content
+		.project-title
+			.logo
+				width 28px !important
+				height 28px !important
+			h1
+				font-size 22px !important
+		.divider
+			width 250px
+		.runner
+			font-size 25px !important
+		.info-btn
+			p
+				font-size 17px !important
+			.icon
+				width 18px
+				height 18px
 	.sm-wrap
 		.icon
 			width 18px !important

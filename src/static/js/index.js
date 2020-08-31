@@ -136,13 +136,12 @@ $(() => { // Projects Page
                 }, 300)
             }, 400)
         })
-        let dividerWidth = $(".project-container .project-basic-info-container .divider")[0].clientWidth
         $(".project-container .project-basic-info-container .divider").animate({
             width: 0
         }, 300, () => {
             setTimeout(() => {
                 $(".project-container .project-basic-info-container .divider").animate({
-                    width: dividerWidth
+                    width: '100%'
                 })
             }, 400)
         })
