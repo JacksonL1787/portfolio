@@ -77,18 +77,11 @@ $(() => { // SCROLL LOCK TO DIFFERENT PAGES
         if(endY - startY >= 0 && page === 1) {
             scrollUp()
             startY = undefined
-        } else if (page === 0){
+        } else if (endY - startY < 0 && page === 0){
             scrollDown()
             startY = undefined
         }
     }, false)
-
-    
-
-    // document.querySelector("body").addEventListener("touchend", (e) => {
-    //     endY = e.changedTouches[0].pageY
-        
-    // }, false)
 
     $(document).keydown((e) => {
         if(e.keyCode === 38 && page === 1) scrollUp();
