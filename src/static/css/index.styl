@@ -181,8 +181,6 @@ body
 			top 50%
 			left 50%
 			transform translate(-50%, -50%)
-			width fit-content
-			height 90%
 			z-index 10
 			.fullscreen-btn
 				width 100%
@@ -208,7 +206,9 @@ body
 					left 50%
 					transform translate(-50%, -50%)
 			.current-img
-				height 100%
+				width 100%
+				max-height 250px
+				max-width 444px
 	.modal-content
 		width 95%
 		margin 30px auto 0
@@ -599,6 +599,12 @@ body
 			margin 20px auto !important
 
 @media only screen and (max-width: 750px)
+	.project-info-modal
+		.links-wrap
+			flex-flow column wrap !important
+			justify-content center !important
+			.link
+				margin 0 0 30px !important 
 	.about-modal
 		width 100% !important
 		min-width 0 !important
@@ -643,6 +649,11 @@ body
 			.icon
 				width 18px !important
 				height 18px !important
+
+@media only screen and (max-height: 850px)
+	.project-container
+		.project-content
+			padding-top 40px !important
 
 @media only screen and (max-width: 550px), only screen and (max-height: 500px)
 	.about-modal
@@ -702,6 +713,11 @@ body
 		transform none !important
 
 @media only screen and (max-width: 440px)
+	.project-info-modal
+		.modal-top
+			.title-wrap
+				left 20px !important
+				transform translateY(-50%) !important
 	.header
 		.name
 			font-size 30px !important
@@ -713,6 +729,12 @@ body
 			.icon
 				width 16px !important
 				height 16px !important
+
+@media only screen and (max-width: 450px)
+	.about-modal
+		.modal-top
+			padding 40px 0 !important
+
 
 @media only screen and (max-width: 350px)
 	.basic-info-content

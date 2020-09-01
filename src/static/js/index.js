@@ -61,6 +61,34 @@ $(() => { // SCROLL LOCK TO DIFFERENT PAGES
             scrollUp()
         }
     })
+    
+    let startY = undefined
+    let endY = undefined
+
+    document.querySelector("body").addEventListener("touchstart", (e) => {
+        startY = e.changedTouches[0].pageY
+        console.log(startY)
+    }, false)
+    
+    document.querySelector("body").addEventListener("touchmove", (e) => {
+        endY = e.changedTouches[0].pageY
+        console.log(startY)
+        if(Math.abs(endY - startY) < 50 || startY === undefined) return;
+        if(endY - startY >= 0 && page === 1) {
+            scrollUp()
+            startY = undefined
+        } else if (page === 0){
+            scrollDown()
+            startY = undefined
+        }
+    }, false)
+
+    
+
+    // document.querySelector("body").addEventListener("touchend", (e) => {
+    //     endY = e.changedTouches[0].pageY
+        
+    // }, false)
 
     $(document).keydown((e) => {
         if(e.keyCode === 38 && page === 1) scrollUp();
