@@ -54,7 +54,7 @@ $(() => { // SCROLL LOCK TO DIFFERENT PAGES
     }
 
     $("body").bind('mousewheel', (e) => {
-        const y = e.originalEvent.deltaY
+        const y = e.originalEvent.deltaY || (e.originalEvent.wheelDelta * -1)
         if(y > 0 && page === 0) {
             scrollDown()
         } else if (y < 0 && page === 1) {

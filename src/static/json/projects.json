@@ -10,6 +10,10 @@
         "links": {
             "github": "https://github.com/JacksonL1787/markdown",
             "website": "https://www.teammarkdown.com"
+        },
+        "body": {
+            "about": "",
+            "tech-list": []
         }
     },
     {
@@ -25,6 +29,10 @@
         "links": {
             "github": "https://github.com/JacksonL1787/koistream",
             "website": "https://koistream.io"
+        },
+        "body": {
+            "about": "",
+            "tech-list": []
         }
     },
     {
@@ -40,6 +48,10 @@
         ],
         "links": {
             "github": "https://github.com/JacksonL1787/Branch"
+        },
+        "body": {
+            "about": "",
+            "tech-list": []
         }
     },
     {
@@ -56,6 +68,10 @@
         ],
         "links": {
             "github": "https://github.com/JacksonL1787/ticketing-tedxdesigntech"
+        },
+        "body": {
+            "about": "",
+            "tech-list": []
         }
     },
     {
@@ -71,6 +87,10 @@
         "links": {
             "github": "https://github.com/JacksonL1787/hill-valley",
             "website": "http://hillvalley.club"
+        },
+        "body": {
+            "about": "",
+            "tech-list": []
         }
     }
 ]
