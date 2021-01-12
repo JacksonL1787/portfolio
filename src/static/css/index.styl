@@ -1,968 +1,115 @@
+// #0E0C4E
+// #0043FE
+// #04E9BA
+// #F830A1
+
 body
-	background #121214 !important
-	&.modal-active
-		.modal-overlay
-			opacity 1
-			visibility visible
+	background #fff !important
 
-.fullscreen-image-container
-	z-index 500
-	background #000
-	width 100vw
+.header-container
+	background #0b0f21
+	width 100%
 	height 100%
-	top 0
-	left 0
-	position fixed
-	display none
-	overflow hidden
-	&.show
-		display block
-	.close-btn
-		background rgba(88,89,93,0.8)
-		width 100%
-		position absolute
-		top 20px
-		left 20px
-		height 40px
-		width 40px
-		border-radius 40px
-		z-index 10
-		cursor pointer
-		-webkit-transition background 0.3s
-		-o-transition background 0.3s
-		transition background 0.3s
-		&:hover
-			background rgba(55,55,58,0.8)
-		.icon
-			background url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/close.svg")
-			background-size cover
-			background-position center
-			background-repeat no-repeat
-			width 18px
-			height 18px
-			position absolute
-			top 50%
-			left 50%
-			-webkit-transform translate(-50%, -50%)
-			-ms-transform translate(-50%, -50%)
-			transform translate(-50%, -50%)
-	img
-		position absolute
-		top 50%
-		left 50%
-		z-index 5
-		-webkit-transform translate(-50%, -50%)
-		-ms-transform translate(-50%, -50%)
-		transform translate(-50%, -50%)
-
-.modal-overlay
-	position fixed
-	opacity 0
-	visibility hidden
-	top 0
-	left 0
-	height 100vh
-	height calc(var(--vh, 1vh) * 100)
-	width 100vw
-	background rgba(0,0,0,0.9)
-	z-index 200
-	-webkit-transition opacity 0.3s, visibility 0.3s
-	-o-transition opacity 0.3s, visibility 0.3s
-	transition opacity 0.3s, visibility 0.3s
-
-.modal
-	opacity 0
-	visibility hidden
-	-webkit-transform translate(-50%, -50%) scale(0.8)
-	-ms-transform translate(-50%, -50%) scale(0.8)
-	transform translate(-50%, -50%) scale(0.8)
-	position fixed
-	top 50%
-	left 50%
-	z-index 300
-	border-radius 0.3em
-	background #0c0c0c
-	-webkit-transition opacity 0.2s, visibility 0.2s, -webkit-transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
-	transition opacity 0.2s, visibility 0.2s, -webkit-transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
-	-o-transition opacity 0.2s, visibility 0.2s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
-	transition opacity 0.2s, visibility 0.2s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
-	transition opacity 0.2s, visibility 0.2s, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), -webkit-transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)
-	&.active
-		opacity 1
-		visibility visible
-		-webkit-transform translate(-50%, -50%) scale(1)
-		-ms-transform translate(-50%, -50%) scale(1)
-		transform translate(-50%, -50%) scale(1)
-	.modal-top
-		background #121212
-		width 100%
-		height -webkit-fit-content
-		height -moz-fit-content
-		height fit-content
-		padding 30px 0
-		border-top-right-radius 0.3em
-		border-top-left-radius 0.3em
-		position relative
-		.close-btn
-			position absolute
-			top 20px
-			right 20px
-			background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/close.svg")
-			background-size cover
-			background-repeat no-repeat
-			background-position center
-			width 22px
-			height 22px
-			opacity 0.5
-			cursor pointer
-			-webkit-transition opacity 0.3s
-			-o-transition opacity 0.3s
-			transition opacity 0.3s
-			&:hover
-				opacity 1
-	.modal-content
-		margin 0 auto
-
-.project-info-modal
-	width 90%
-	height 90%
-	.modal-top
-		padding 0 !important
-		height 65px !important
-		background transparent !important
-		.close-btn
-			top 50% !important
-			-webkit-transform translateY(-50%)
-			-ms-transform translateY(-50%)
-			transform translateY(-50%)
-		.title-wrap
-			display -webkit-box
-			display -ms-flexbox
-			display flex
-			position absolute
-			top 50%
-			left 50%
-			-webkit-transform translate(-50%, -50%)
-			-ms-transform translate(-50%, -50%)
-			transform translate(-50%, -50%)
-			-webkit-box-align center
-			-ms-flex-align center
-			align-items center
-			-webkit-box-pack center
-			-ms-flex-pack center
-			justify-content center
-			.logo
-				background-size cover
-				background-position center
-				background-repeat no-repeat
-				width 30px
-				height 30px
-				margin-right 10px
-			p
-				color #fff
-				margin 2px 0 0
-				font-size 20px
-				font-weight 600
-				letter-spacing 0.5px
-	.pictures-container
-		height 300px
-		background #121212
-		position relative
-		.no-pictures
-			color #d3d3d3
-			font-size 25px
-			position absolute
-			top 50%
-			font-weight 500
-			left 50%
-			-webkit-transform translate(-50%, -50%)
-			-ms-transform translate(-50%, -50%)
-			transform translate(-50%, -50%)
-			display none
-		.change-img-wrap
-			position absolute
-			top 50%
-			left 50%
-			-webkit-transform translate(-50%, -50%)
-			-ms-transform translate(-50%, -50%)
-			transform translate(-50%, -50%)
-			height -webkit-fit-content
-			height -moz-fit-content
-			height fit-content
-			width calc(100% - 50px)
-			display -webkit-box
-			display -ms-flexbox
-			display flex
-			-webkit-box-align center
-			-ms-flex-align center
-			align-items center
-			-webkit-box-pack justify
-			-ms-flex-pack justify
-			justify-content space-between
-			z-index 5
-			div
-				background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/white-right-arrow.svg")
-				background-size cover
-				background-position center
-				background-repeat no-repeat
-				width 25px
-				height 25px
-				opacity 0.5
-				cursor pointer
-				-webkit-transition opacity 0.3s
-				-o-transition opacity 0.3s
-				transition opacity 0.3s
-				&:hover
-					opacity 1
-			.previous-btn
-				-webkit-transform rotate(180deg)
-				-ms-transform rotate(180deg)
-				transform rotate(180deg)
-		.img-wrap
-			position absolute
-			top 50%
-			left 50%
-			-webkit-transform translate(-50%, -50%)
-			-ms-transform translate(-50%, -50%)
-			transform translate(-50%, -50%)
-			z-index 10
-			.fullscreen-btn
-				width 100%
-				height 100%
-				top 0
-				left 0
-				background rgba(0,0,0,0.7)
-				position absolute
-				opacity 0
-				-webkit-transition opacity 0.3s
-				-o-transition opacity 0.3s
-				transition opacity 0.3s
-				cursor pointer
-				&:hover
-					opacity 1
-				.icon
-					background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/fullscreen.svg")
-					background-size cover
-					background-position center
-					background-repeat no-repeat
-					width 30px
-					height 30px
-					position absolute
-					top 50%
-					left 50%
-					-webkit-transform translate(-50%, -50%)
-					-ms-transform translate(-50%, -50%)
-					transform translate(-50%, -50%)
-			.current-img
-				width 100%
-				max-height 250px
-				max-width 444px
-	.modal-content
-		width 95%
-		margin 30px auto 0
-		height calc(100% - 395px)
-		overflow-y auto
-		.links-wrap
-			display -webkit-box
-			display -ms-flexbox
-			display flex
-			-webkit-box-pack center
-			-ms-flex-pack center
-			justify-content center
-			-webkit-box-align center
-			-ms-flex-align center
-			align-items center
-			margin 0 auto
-			.link
-				display -webkit-box
-				display -ms-flexbox
-				display flex
-				-webkit-box-pack center
-				-ms-flex-pack center
-				justify-content center
-				opacity 0.5
-				margin 0 30px
-				-webkit-transition opacity 0.3s
-				-o-transition opacity 0.3s
-				transition opacity 0.3s
-				text-decoration none
-				&:hover
-					opacity 1
-				.logo
-					background-size cover
-					background-position center
-					background-repeat no-repeat
-					width 22px
-					height 22px
-					margin-right 8px
-				p
-					color #fff
-					font-size 15px
-					text-transform uppercase
-					letter-spacing 1px
-					margin 0
-					font-weight 700
-					cursor pointer
-
-.about-modal
-	max-width 900px
-	min-width 720px
-	.modal-top
-		height 170px
-		.profile-picture
-			background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/profile-picture.jpeg")
-			background-size cover
-			background-position center
-			background-repeat no-repeat
-			width 125px
-			height 125px
-			border-radius 125px
-			margin-bottom 15px
-			margin 0 auto 15px
-			-webkit-box-shadow 0 0 0 4px #121111, 0 0 0 5px #2d2c2c, 0 0 0 9px #121111, 0 0 0 10px #1f1f1f
-			box-shadow 0 0 0 4px #121111, 0 0 0 5px #2d2c2c, 0 0 0 9px #121111, 0 0 0 10px #1f1f1f
-		h1
-			&.name
-				color #fff
-				font-weight 400
-				font-size 20px
-				letter-spacing 0.6px
-				text-align center
-				margin 0
-	.modal-content
-		padding 30px 0
-		height calc(100% - 290px)
-		overflow-y auto
-		.label
-			color #808080
-			font-size 14px
-			text-transform uppercase
-			letter-spacing 0.5px
-			margin-left 20px
-		.text
-			color #fff
-			letter-spacing 0.3px
-			line-height 180%
-			width calc(100% - 40px)
-			margin 10px 0 10px 20px
-		.about-me-p
-			margin-top 0 !important
-		.download-resume
-			display -webkit-box
-			display -ms-flexbox
-			display flex
-			-webkit-box-align center
-			-ms-flex-align center
-			align-items center
-			margin 20px auto 10px
-			width -webkit-fit-content
-			width -moz-fit-content
-			width fit-content
-			-webkit-box-pack center
-			-ms-flex-pack center
-			justify-content center
-			opacity 0.5
-			-webkit-transition opacity 0.3s
-			-o-transition opacity 0.3s
-			transition opacity 0.3s
-			&:hover
-				opacity 1
-			a
-				color #fff
-				font-size 16px
-				font-weight 500
-				letter-spacing 0.5px
-				margin 0 5px 0 0
-				text-decoration none
-			.icon
-				background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/white-right-arrow.svg")
-				background-size cover
-				background-repeat no-repeat
-				background-position center
-				width 18px
-				height 18px
-				-webkit-transform rotate(90deg)
-				-ms-transform rotate(90deg)
-				transform rotate(90deg)
-
-.splash-container,
-.projects-container
 	position relative
-	width 100vw
-	height 100%
-	transition -webkit-filter 0.05s linear
-
-.splash-container .down-arrow,
-.projects-container .down-arrow,
-.splash-container .up-arrow,
-.projects-container .up-arrow
-	background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/white-right-arrow.svg")
-	background-size cover
-	background-repeat no-repeat
-	background-position center
-	width 25px
-	height 25px
-	opacity 0.7
-	cursor pointer
-	-webkit-transition 0.3s
-	-o-transition 0.3s
-	transition 0.3s
-
-.splash-container
-	.header
-		position absolute
-		left 100px
-		top 50%
-		-webkit-transform translateY(-50%)
-		-ms-transform translateY(-50%)
-		transform translateY(-50%)
-		width -webkit-fit-content
-		width -moz-fit-content
-		width fit-content
-		h1
-			&.name
-				color #fff
-				font-size 60px
-				letter-spacing 1px
-				width 100%
-		.flex-wrap
-			display -webkit-box
-			display -ms-flexbox
+	#nav
+		width 100%
+		height 100px
+		.nav-content
+			width calc(100% - 80px)
+			margin 0 auto
+			height 100%
 			display flex
-			-webkit-box-pack justify
-			-ms-flex-pack justify
 			justify-content space-between
-			-webkit-box-align center
-			-ms-flex-align center
 			align-items center
-			p
-				&.subtitle
-					color #7a7a7a
-					font-size 15px
-					text-transform uppercase
-					letter-spacing 1px
-					font-weight 300
-					text-align right
-					display block
-			.about
-				display -webkit-box
-				display -ms-flexbox
+			.nav-links-container
 				display flex
-				-webkit-box-pack right
-				-ms-flex-pack right
-				justify-content right
-				-webkit-box-align center
-				-ms-flex-align center
+				align-items center
+				.nav-link-button
+					
+			.lets-talk-button
+				height 50px
+				width 160px
+				background #0043FE
+				border-radius 1000px
+				display flex
+				justify-content center
 				align-items center
 				cursor pointer
-				opacity 0.6
-				-webkit-transition 0.3s
-				-o-transition 0.3s
-				transition 0.3s
+				transition background .3s
 				&:hover
-					opacity 1
+					background #0438ca
+				.icon
+					width 30px
+					height 30px
+					margin 2px 8px 0 0
 				p
 					color #fff
 					font-weight 600
-					font-size 14px
-					letter-spacing 0.5px
-				.icon
-					background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/white-right-arrow.svg")
-					background-size cover
-					background-repeat no-repeat
-					background-position center
-					width 20px
-					height 20px
-					margin-left 5px
-	.sm-wrap
-		position absolute
-		top 50%
-		-webkit-transform translateY(-50%)
-		-ms-transform translateY(-50%)
+					font-size 0.95em
+					letter-spacing .5px
+	#sm-container
+		top calc(50% - 30px)
 		transform translateY(-50%)
 		right 50px
-		.icon
-			background-size cover
-			background-repeat no-repeat
-			background-position center
-			width 22px
-			cursor pointer
+		position absolute
+		.social-media-button
+			width 50px
+			height 50px
+			margin-bottom 40px
+			border-radius 40px
 			display block
-			height 22px
-			margin 30px 0
-			opacity 0.5
-			-webkit-transition 0.3s
-			-o-transition 0.3s
-			transition 0.3s
-			&:hover
-				opacity 1
-	.down-arrow
-		position absolute
-		bottom 50px
-		left 50%
-		-webkit-transform translateX(-50%) rotate(90deg)
-		-ms-transform translateX(-50%) rotate(90deg)
-		transform translateX(-50%) rotate(90deg)
-		&:hover
-			opacity 1
-
-.projects-container
-	.top-container
-		padding 50px 0 30px
-		width 100%
-		.up-arrow
-			margin 0 auto
-			-webkit-transform rotate(-90deg)
-			-ms-transform rotate(-90deg)
-			transform rotate(-90deg)
-			&:hover
-				opacity 1
-	.project-container
-		height calc(100% - 206px)
-		width 100%
-		.project-content
-			width 90%
-			margin 0 auto
-			padding 100px 0 20px
-			display -webkit-box
-			display -ms-flexbox
-			display flex
-			-webkit-box-pack justify
-			-ms-flex-pack justify
-			justify-content space-between
-			-webkit-box-align center
-			-ms-flex-align center
-			align-items center
+			background #1b213a
 			position relative
-			max-width 1875px
-			.project-basic-info-container
-				margin-right 40px
-				width 55%
-				height -webkit-fit-content
-				height -moz-fit-content
-				height fit-content
-				position relative
-				.basic-info-content
-					.project-title
-						display -webkit-box
-						display -ms-flexbox
-						display flex
-						-webkit-box-pack left
-						-ms-flex-pack left
-						justify-content left
-						-webkit-box-align center
-						-ms-flex-align center
-						align-items center
-						width -webkit-fit-content
-						width -moz-fit-content
-						width fit-content
-						margin-left 10px
-						.logo
-							background-size cover
-							background-position center
-							background-repeat no-repeat
-							width 45px
-							height 45px
-							margin-right 20px
-						h1
-							font-size 35px
-							letter-spacing 0.3px
-							color #fff
-							margin 4px 0 0
-					.divider
-						background rgba(255,255,255,0.15)
-						width 100%
-						max-width 400px
-						height 1px
-						margin 15px 0
-					.project-basic-info-content
-						margin-left 10px
-						.runner
-							color #fff
-							letter-spacing 0.5px
-							font-size 50px
-							font-weight 200
-						.info-btn
-							display -webkit-box
-							display -ms-flexbox
-							display flex
-							-webkit-box-pack left
-							-ms-flex-pack left
-							justify-content left
-							-webkit-box-align center
-							-ms-flex-align center
-							align-items center
-							cursor pointer
-							margin-top 20px
-							opacity 0.6
-							width -webkit-fit-content
-							width -moz-fit-content
-							width fit-content
-							-webkit-transition opacity 0.3s
-							-o-transition opacity 0.3s
-							transition opacity 0.3s
-							&:hover
-								opacity 1
-							p
-								color #fff
-								font-weight 400
-								font-size 20px
-								letter-spacing 0.5px
-							.icon
-								background-image url("https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/white-right-arrow.svg")
-								background-size cover
-								background-repeat no-repeat
-								background-position center
-								width 25px
-								height 25px
-								margin-left 10px
-								margin-top 1px
-			.project-pictures-container
-				height 100%
-				width calc(45% - 40px)
-				height -webkit-fit-content
-				height -moz-fit-content
-				height fit-content
-				position relative
-				.picture
-					width 100%
-					position absolute
-					top 50%
-					-webkit-transform translateY(-50%)
-					-ms-transform translateY(-50%)
-					transform translateY(-50%)
-	.projects-select-container
+			cursor pointer
+			transition background .3s
+			&:hover
+				background #0043fe
+			.icon
+				position absolute
+				top 50%
+				left 50%
+				transform translate(-50%, -50%)
+	#jumbo-content-wrap
 		position absolute
-		bottom 0
-		left 50%
-		-webkit-transform translateX(-50%)
-		-ms-transform translateX(-50%)
-		transform translateX(-50%)
-		padding 15px 0 0
-		width -webkit-fit-content
-		width -moz-fit-content
-		width fit-content
-		.title
-			text-align center
-			color #d3d3d3
-			font-size 14px
-			font-weight 400
-			letter-spacing 0.5px
-			margin-bottom 15px
-		.select-wrap
-			display -webkit-box
-			display -ms-flexbox
-			display flex
-			-webkit-box-pack center
-			-ms-flex-pack center
-			justify-content center
-			-webkit-box-align center
-			-ms-flex-align center
-			align-items center
-			.option
-				width 50px
-				height 50px
+		top calc(50% - 40px)
+		transform translateY(-50%)
+		left 40px
+		.large-hello-text
+			color #0043FE
+			font-size 10em
+			line-height 100%
+		.introduction-text
+			color #b8becc
+			font-size 2em
+			margin 10px 0 0 10px
+			line-height 130%
+			font-weight 300
+			b
+				font-weight 300
+				color #fff
 				position relative
-				background transparent
-				cursor pointer
-				-webkit-transition background 0.3s
-				-o-transition background 0.3s
-				transition background 0.3s
-				&:hover
-					background rgba(255,255,255,0.1)
-				&.active
-					background #fff
-					p
-						color #121214
-				p
-					position absolute
-					top 50%
-					left 50%
-					-webkit-transform translate(-50%, -50%)
-					-ms-transform translate(-50%, -50%)
-					transform translate(-50%, -50%)
-					color #fff
-					font-size 20px
-					font-weight 800
-					-webkit-transition color 0.3s
-					-o-transition color 0.3s
-					transition color 0.3s
-
-@media only screen and (max-width: 1300px)
-	.basic-info-content
-		.project-title
-			.logo
-				width 40px !important
-				height 40px !important
-			h1
-				font-size 30px !important
-		.runner
-			font-size 40px !important
-		.info-btn
+		.view-projects-button
+			margin-top 25px
+			height 50px
+			border 1px solid #1B213A
+			width 230px
+			border-radius 1000px
+			display flex
+			justify-content center
+			align-items center
+			cursor pointer
+			transition border-color .3s
+			&:hover
+				border-color #20284c
+				.icon
+					transform translateX(5px)
 			p
-				font-size 19px !important
+				color #fff
+				font-size 1.05em
+				letter-spacing .5px
+				font-weight 600
 			.icon
-				width 22px
-				height 22px
-
-@media only screen and (max-width: 1100px)
-	.basic-info-content
-		.project-title
-			.logo
-				width 35px !important
-				height 35px !important
-			h1
-				font-size 25px !important
-		.runner
-			font-size 34px !important
-		.info-btn
-			p
-				font-size 18px !important
-			.icon
-				width 20px
-				height 20px
-
-@media only screen and (max-width: 1000px)
-	.header
-		left 50% !important
-		-webkit-transform translate(-50%, -50%) !important
-		-ms-transform translate(-50%, -50%) !important
-		transform translate(-50%, -50%) !important
-	.sm-wrap
-		margin 0 auto 30px !important
-		top 30px !important
-		position relative !important
-		-webkit-transform none !important
-		-ms-transform none !important
-		transform none !important
-		right auto !important
-		display -webkit-box
-		display -ms-flexbox
-		display flex
-		-webkit-box-align center
-		-ms-flex-align center
-		align-items center
-		-webkit-box-pack center
-		-ms-flex-pack center
-		justify-content center
-		.icon
-			margin 0 30px !important
-
-@media only screen and (max-width: 900px)
-	.project-pictures-container
-		display none
-	.project-basic-info-container
-		width 100% !important
-		margin 0 !important
-		.project-title
-			margin 0 auto !important
-			justify-content center !important
-		.divider
-			margin 15px auto !important
-		.project-basic-info-content
-			margin 0 !important
-		.runner
-			text-align center !important
-		.info-btn
-			margin 20px auto !important
-			justify-content center !important22222
-
-@media only screen and (max-width: 750px)
-	.project-info-modal
-		.links-wrap
-			-webkit-box-orient vertical !important
-			-webkit-box-direction normal !important
-			-ms-flex-flow column wrap !important
-			flex-flow column wrap !important
-			-webkit-box-pack center !important
-			-ms-flex-pack center !important
-			justify-content center !important
-			.link
-				margin 0 0 30px !important
-	.about-modal
-		width 100% !important
-		min-width 0 !important
-		max-width auto !important
-		height 100% !important
-		border-radius 0 !important
-		.modal-content
-			padding 20px 0 !important
-			height calc(100% - 270px)
-
-@media only screen and (max-height: 600px)
-	.about-modal
-		width 100% !important
-		min-width 0 !important
-		max-width 100% !important
-		height 100% !important
-		border-radius 0 !important
-		.modal-content
-			padding 20px 0 !important
-			height calc(100% - 270px)
-
-@media only screen and (max-width: 650px)
-	.header
-		.name
-			font-size 50px !important
-
-@media only screen and (max-width: 630px)
-	.about-modal
-		.modal-content
-			.label
-				font-size 13px
-			.text
-				font-size 15px
-	.header
-		.name
-			font-size 40px !important
-		.subtitle
-			font-size 13px !important
-		.about
-			p
-				font-size 13px !important
-			.icon
-				width 18px !important
-				height 18px !important
-
-@media only screen and (max-height: 850px)
-	.project-container
-		.project-content
-			padding-top 40px !important
-
-@media only screen and (max-width: 550px), only screen and (max-height: 500px)
-	.about-modal
-		.modal-top
-			height 60px !important
-			.profile-contianer
-				display -webkit-box !important
-				display -ms-flexbox !important
-				display flex !important
-				-webkit-box-pack center !important
-				-ms-flex-pack center !important
-				justify-content center !important
-				width 100% !important
-				-webkit-box-align center
-				-ms-flex-align center
-				align-items center
-				.profile-picture
-					width 65px !important
-					height 65px !important
-					margin 0 !important
-					-webkit-box-shadow 0 0 0 4px #121111, 0 0 0 5px #2d2c2c !important
-					box-shadow 0 0 0 4px #121111, 0 0 0 5px #2d2c2c !important
-				.name
-					margin 0 0 0 25px !important
-		.modal-content
-			height calc(100% - 160px)
-
-@media only screen and (max-width: 500px)
-	.basic-info-content
-		.project-title
-			.logo
-				width 30px !important
-				height 30px !important
-			h1
-				font-size 22px !important
-		.divider
-			width 300px
-		.runner
-			font-size 30px !important
-		.info-btn
-			p
-				font-size 17px !important
-			.icon
-				width 18px
-				height 18px
-
-@media only screen and (max-height: 450px)
-	.sm-wrap
-		margin 0 auto 50px !important
-		top 30px !important
-		position relative !important
-		-webkit-transform none !important
-		-ms-transform none !important
-		transform none !important
-		right auto !important
-		display -webkit-box
-		display -ms-flexbox
-		display flex
-		-webkit-box-align center
-		-ms-flex-align center
-		align-items center
-		-webkit-box-pack center
-		-ms-flex-pack center
-		justify-content center
-		.icon
-			margin 0 30px !important
-	.header
-		position relative !important
-		top 0 !important
-		left 0 !important
-		margin 0 auto !important
-		-webkit-transform none !important
-		-ms-transform none !important
-		transform none !important
-
-@media only screen and (max-width: 440px)
-	.project-info-modal
-		.modal-top
-			.title-wrap
-				left 20px !important
-				-webkit-transform translateY(-50%) !important
-				-ms-transform translateY(-50%) !important
-				transform translateY(-50%) !important
-	.header
-		.name
-			font-size 30px !important
-		.subtitle
-			font-size 12px !important
-		.about
-			p
-				font-size 12px !important
-			.icon
-				width 16px !important
-				height 16px !important
-
-@media only screen and (max-width: 450px)
-	.about-modal
-		.modal-top
-			padding 40px 0 !important
-
-@media only screen and (max-width: 350px)
-	.basic-info-content
-		.project-title
-			.logo
-				width 28px !important
-				height 28px !important
-			h1
-				font-size 22px !important
-		.divider
-			width 250px
-		.runner
-			font-size 25px !important
-		.info-btn
-			p
-				font-size 17px !important
-			.icon
-				width 18px
-				height 18px
-	.sm-wrap
-		.icon
-			width 18px !important
-			height 18px !important
-			margin 0 25px !important
-	.header
-		.name
-			font-size 25px !important
-		.subtitle
-			font-size 11px !important
-		.about
-			p
-				font-size 11px !important
-			.icon
-				width 15px !important
-				height 15px !important
-
-@media only screen and (max-height: 330px)
-	.down-arrow
-		bottom 15px !important
+				width 30px
+				height 30px
+				margin-left 10px
+				transition transform .3s

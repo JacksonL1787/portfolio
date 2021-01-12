@@ -5,86 +5,29 @@ html
 		link(rel="stylesheet" href="/css/main.css")
 		link(rel="stylesheet" href="/css/index.css")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-		script.
-			let projectsRaw = "#{projects}"
-			if(projectsRaw) {
-				window.projects = JSON.parse(projectsRaw.replace(/&quot;/g,'"').replace(/&amp;/g,'&'))
-			}
 	body
-		.modal-overlay
-		.fullscreen-image-container
-			.close-btn
-				.icon
-			img
-		.modal.about-modal
-			.modal-top
-				.close-btn
-				.profile-contianer
-					.profile-picture
-					h1.name Jackson Lawrence
-			.modal-content
-				p.text Hello!
-				p.text.about-me-p My name is Jackson Lawrence, I am currently a senior at Design Tech High School, located in Silicon Valley. I have worked as a full-stack web developer for the last 3 years. During this time, I have developed several websites and web applications for clubs, schools, non-profit organizations, and even corporate conferences such as Oracle Open World.
-				.download-resume
-					a(href="/files/Jackson_Lawrence_Resume.pdf" download="Jackson Lawrence Resume") Download My Resume
-					.icon
-		.modal.project-info-modal
-			.modal-top
-				.close-btn
-				.title-wrap
-					.logo
-					p
-			.pictures-container
-				h1.no-pictures No Pictures
-				.change-img-wrap
-					.previous-btn
-					.next-btn
-				.img-wrap
-					.fullscreen-btn
-						.icon
-					img.current-img
-			.modal-content
-				.links-wrap
-					a.link.github(target="_blank")
-						.logo(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/github.svg);")
-						p Go To Repository
-					a.link.website(target="_blank")
-						.logo(style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/website-icon.svg);")
-						p Go To Website
-		.splash-container
-			.sm-wrap
-				a.icon.github(href="https://github.com/JacksonL1787" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/github.svg);")
-				a.icon.linkedin(href="https://www.linkedin.com/in/jackson-lawrence-726625183/" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/linkedin.svg);")
-				//a.icon.upwork(href="https://www.upwork.com/freelancers/~01a4bfd99c0a63fa66" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/upwork.svg);")
-				a.icon.email(href="mailto:jlawrence1787@gmail.com" style="background-image: url(https://s3-us-west-2.amazonaws.com/jacksonlawrence.dev-portfolio-assets/sm-icons/email.svg);")
-			.header
-				.left
-					h1.name Jackson Lawrence
-					.flex-wrap
-						p.subtitle Full Stack Web Developer
-						.about
-							p About
-							.icon
-			.down-arrow
-		.projects-container
-			.top-container
-				.up-arrow
-			.project-container
-				.project-content
-					.project-basic-info-container
-						.basic-info-content
-							.project-title
-								.logo
-								h1
-							.divider
-							.project-basic-info-content
-								h2.runner
-								.info-btn
-									p Info
-									.icon
-					.project-pictures-container
-						img.picture
-			.projects-select-container
-				h1.title Projects
-				.select-wrap
+		.header-container
+			#nav
+				.nav-content
+					.left-container
+						.nav-links-container
+							p.nav-link-button About
+							p.nav-link-button Projects
+							p.nav-link-button Resume
+					.lets-talk-button
+						img.icon(src="/img/envelope-icon-white.svg")
+						p Let's Talk
+			#jumbo-content-wrap
+				h1.large-hello-text Hello
+				p.introduction-text I'm Jackson, a Web Developer and UI/UX Designer.
+				.view-projects-button
+					p View Projects
+					img.icon(src="/img/right-arrow-icon-blue.svg")
+			#sm-container
+				a.social-media-button(target="_blank")
+					img.icon(src="/img/github-icon-white.svg" style="width: 30px; height: 30px;")
+				a.social-media-button
+					img.icon(src="/img/linkedin-icon-white.svg" style="width: 24px; height: 24px; left: calc(50% + 1px);")
+				a.social-media-button
+					img.icon(src="/img/twitter-icon-white.svg" style="width: 30px; height: 30px; top: calc(50% + 1px); left: calc(50% + 1px);")
 	script(src="/js/index.js")
