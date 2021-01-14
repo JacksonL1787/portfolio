@@ -4,112 +4,366 @@
 // #F830A1
 
 body
-	background #fff !important
+	background #0b0f21 !important
 
 .header-container
-	background #0b0f21
 	width 100%
 	height 100%
+	background 
 	position relative
-	#nav
-		width 100%
-		height 100px
-		.nav-content
-			width calc(100% - 80px)
-			margin 0 auto
-			height 100%
-			display flex
-			justify-content space-between
-			align-items center
-			.nav-links-container
+	.header-content
+		width calc(100% - 100px)
+		max-width 1700px
+		height 100%
+		margin 0 auto
+		position relative
+		#nav
+			width 100%
+			height 100px
+			.nav-content
+				width 100%
+				margin 0 auto
+				height 100%
 				display flex
+				justify-content space-between
 				align-items center
-				.nav-link-button
-					
-			.lets-talk-button
+				.left-container
+					display flex
+					align-items center
+					.logo
+						width 46px
+						height 46px
+						margin-right 75px
+					.nav-links-container
+						display flex
+						align-items center
+						.nav-link-button
+							color #fff
+							font-weight 600
+							cursor pointer
+							font-size 0.95em
+							letter-spacing .5px
+							margin-right 45px
+							text-decoration none
+							text-transform uppercase
+							position relative
+							&:hover::before
+								width 100%
+							&::before
+								content ""
+								width 0
+								height 3px
+								background #0043FE
+								position absolute
+								bottom -3px
+								left 50%
+								transform translateX(-50%)
+								transition width .3s
+				.lets-talk-button
+					height 50px
+					width 160px
+					background #0043FE
+					border-radius 1000px
+					display flex
+					justify-content center
+					align-items center
+					cursor pointer
+					transition background .3s
+					&:hover
+						background #0438ca
+					.icon
+						width 30px
+						height 30px
+						margin 2px 8px 0 0
+					p
+						color #fff
+						font-weight 600
+						font-size 0.95em
+						letter-spacing .5px
+		#jumbo-content-wrap
+			position absolute
+			top calc(50% - 40px)
+			transform translateY(-50%)
+			left 0
+			.large-hello-text
+				color #0043FE
+				font-size 10em
+				line-height 100%
+			.introduction-text
+				color #b8becc
+				font-size 2em
+				margin 10px 0 0 10px
+				line-height 130%
+				font-weight 300
+				b
+					font-weight 300
+					color #fff
+					position relative
+			.view-projects-button
+				margin-top 25px
 				height 50px
-				width 160px
-				background #0043FE
+				border 1px solid #1B213A
+				width 250px
 				border-radius 1000px
 				display flex
 				justify-content center
 				align-items center
 				cursor pointer
-				transition background .3s
+				transition border-color .3s
 				&:hover
-					background #0438ca
+					border-color #3d4c88
+					.icon
+						transform translateX(5px)
+				p
+					color #fff
+					font-size 1.05em
+					letter-spacing .5px
+					font-weight 600
 				.icon
 					width 30px
 					height 30px
-					margin 2px 8px 0 0
-				p
-					color #fff
-					font-weight 600
-					font-size 0.95em
-					letter-spacing .5px
-	#sm-container
-		top calc(50% - 30px)
-		transform translateY(-50%)
-		right 50px
-		position absolute
-		.social-media-button
-			width 50px
-			height 50px
-			margin-bottom 40px
-			border-radius 40px
-			display block
-			background #1b213a
-			position relative
-			cursor pointer
-			transition background .3s
-			&:hover
-				background #0043fe
-			.icon
-				position absolute
-				top 50%
-				left 50%
-				transform translate(-50%, -50%)
-	#jumbo-content-wrap
-		position absolute
-		top calc(50% - 40px)
-		transform translateY(-50%)
-		left 40px
-		.large-hello-text
-			color #0043FE
-			font-size 10em
-			line-height 100%
-		.introduction-text
-			color #b8becc
-			font-size 2em
-			margin 10px 0 0 10px
-			line-height 130%
-			font-weight 300
-			b
-				font-weight 300
-				color #fff
-				position relative
-		.view-projects-button
-			margin-top 25px
-			height 50px
-			border 1px solid #1B213A
-			width 230px
-			border-radius 1000px
+					margin-left 10px
+					transition transform .3s
+		.header-bottom-container
 			display flex
-			justify-content center
+			position absolute
+			bottom 40px
 			align-items center
-			cursor pointer
-			transition border-color .3s
-			&:hover
-				border-color #20284c
+			justify-content space-between
+			width 100%
+			#sm-container
+				display flex
+				align-items center
+				margin-top -5px
+				.social-media-button
+					width 50px
+					height 50px
+					margin-left 40px
+					border-radius 40px
+					display block
+					background #1c213a
+					position relative
+					cursor pointer
+					transition background .3s
+					&:hover
+						background #0043fe
+					.icon
+						position absolute
+						top 50%
+						left 50%
+						transform translate(-50%, -50%)
+			#scroll-down-button
+				display flex
+				align-items center
+				cursor pointer
+				&:hover .icon
+					animation arrowBounce .8s infinite
+				.text
+					color #fff
+					font-size 1.1em
+					letter-spacing .5px
+					font-weight 500
 				.icon
-					transform translateX(5px)
-			p
+					width 28px
+					height 28px
+					margin-left 8px
+					transform rotate(90deg)
+
+#main
+	width calc(100% - 100px)
+	max-width 1700px
+	margin 200px auto
+	position relative
+	.container-title-wrap
+		display flex
+		align-items center
+		margin-bottom 50px
+		h1
+			color #0043FE
+			letter-spacing .5px
+			margin-right 10px
+			font-size 4.5em
+			text-transform uppercase
+			line-height 100%
+		.divider
+			width 75px
+			height 5px
+			background #1c213a
+	.about-me-container
+		width 100%
+		.about-text-container	
+			width 100%
+			margin 0 auto
+			.about-text
 				color #fff
-				font-size 1.05em
+				font-size 1.1em
+				line-height 150%
+				margin-bottom 20px
+				letter-spacing .3px
+			.about-me-links-container
+				display flex
+				align-items center
+				margin-top 40px
+				.contact-me-link
+					margin-right 40px
+				a
+					display flex
+					align-items center
+					text-decoration none
+					width fit-content
+					cursor pointer
+					&:hover
+						.value
+							color #1250ff
+						path
+							fill #1250ff
+					svg
+						width 30px
+						height 30px
+						margin-right 8px
+						path
+							fill #b8becc
+							transition fill .3s
+					.value
+						color #b8becc
+						font-size 1.2em
+						letter-spacing .5px
+						font-weight 500
+						
+						transition color .3s
+					
+	.projects-container
+		margin-top 200px
+		width 100%
+		position relative
+		.projects-content
+			display flex
+			flex-flow row wrap
+			width 100%
+			.project
+				width calc(33.3% - 10px)
+				height fit-content
+				position relative
+				overflow hidden
+				cursor pointer
+				margin 0 15px 15px 0
+				&:nth-child(3n)
+					margin-right 0
+				&:hover
+					.more-info-button
+						bottom calc(-100% + 55px)
+					.overlay
+						opacity 1
+				.more-info-button
+					position absolute
+					height 100%
+					width 100%
+					background #1250ff
+					cursor pointer
+					bottom -100%
+					z-index 3
+					transition bottom .3s cubic-bezier(0.34, 1.56, 0.64, 1)
+					.button-content
+						display flex
+						align-items center
+						justify-content space-between
+						width calc(100% - 30px)
+						margin 0 auto
+						height 55px
+						.project-title
+							font-weight 500
+							font-size 1em
+							color #fff
+							letter-spacing .5px
+						.icon
+							width 30px
+							height 30px
+				.overlay
+					width 100%
+					height 100%
+					position absolute
+					background rgba(11,15,33,0.4)
+					top 0
+					left 0
+					z-index 2
+					opacity 0
+					transition opacity .3s
+				.project-splash-image
+					width 100%
+		
+#contact-me-container
+	background #070a17
+	width 100%
+	padding 75px 0
+	.content-container
+		display flex
+		align-items center
+		justify-content center
+		width calc(100% - 100px)
+		.description-container
+			width 50%
+			.description-title
+				color #0043fe
+				font-size 4em
+				text-transform uppercase
+				line-height 100%
+				text-align center
 				letter-spacing .5px
-				font-weight 600
-			.icon
-				width 30px
-				height 30px
-				margin-left 10px
-				transition transform .3s
+		.form-container
+			width 50%
+			min-width 900px
+			.flex-wrap
+				display flex
+				flex-flow row wrap
+				align-items center
+				max-width 725px
+				.input-container
+					height 100%
+					padding 2px 5px
+					margin 0 4px
+					transition padding .2s linear
+					&.active
+						//padding 0
+						input
+							padding 2px 5px
+							background #262b44
+							border-color transparent
+
+					input
+						border none
+						background transparent
+						text-transform uppercase
+						font-size 1.3em
+						letter-spacing .5px
+						font-weight 600
+						outline none
+						padding 0
+						border-bottom 2px solid #62636d
+						border-top 2px solid transparent
+						color #fff
+						transition padding .2s linear, background .2s linear
+						&::placeholder
+							color #62636d
+						&.contact-name-input
+							width 300px
+						&.contact-request-input
+							width 450px
+						&.contact-email-input
+							width 375px
+				h1
+					font-size 1.8em
+					word-wrap break-word
+					font-weight 500
+					line-height 250%
+					margin-right 6px
+					letter-spacing .5px
+					color #dbdce4
+
+
+@keyframes arrowBounce
+	0%
+		transform rotate(90deg) translate(0)
+	50%
+		transform rotate(90deg) translate(10px)
+	100%
+		transform rotate(90deg) translate(0)

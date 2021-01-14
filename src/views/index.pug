@@ -4,30 +4,138 @@ html
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		link(rel="stylesheet" href="/css/main.css")
 		link(rel="stylesheet" href="/css/index.css")
+		link(rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png")
+		link(rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png")
+		link(rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png")
+		link(rel="manifest" href="/img/favicon/site.webmanifest")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 	body
 		.header-container
-			#nav
-				.nav-content
-					.left-container
-						.nav-links-container
-							p.nav-link-button About
-							p.nav-link-button Projects
-							p.nav-link-button Resume
-					.lets-talk-button
-						img.icon(src="/img/envelope-icon-white.svg")
-						p Let's Talk
-			#jumbo-content-wrap
-				h1.large-hello-text Hello
-				p.introduction-text I'm Jackson, a Web Developer and UI/UX Designer.
-				.view-projects-button
-					p View Projects
-					img.icon(src="/img/right-arrow-icon-blue.svg")
-			#sm-container
-				a.social-media-button(target="_blank")
-					img.icon(src="/img/github-icon-white.svg" style="width: 30px; height: 30px;")
-				a.social-media-button
-					img.icon(src="/img/linkedin-icon-white.svg" style="width: 24px; height: 24px; left: calc(50% + 1px);")
-				a.social-media-button
-					img.icon(src="/img/twitter-icon-white.svg" style="width: 30px; height: 30px; top: calc(50% + 1px); left: calc(50% + 1px);")
+			.header-content
+				#nav
+					.nav-content
+						.left-container
+							img.logo(src="/img/logo.png")
+							.nav-links-container
+								p.nav-link-button#about-nav-link About
+								p.nav-link-button#projects-nav-link Projects
+								a.nav-link-button(target="_blank" href="/resume") Resume
+						.lets-talk-button
+							img.icon(src="/img/envelope-icon-white.svg")
+							p Hire Me
+				#jumbo-content-wrap
+					h1.large-hello-text Hello
+					p.introduction-text I'm Jackson Lawrence, a Web Developer<br>and UI/UX Designer.
+					.view-projects-button
+						p View My Projects
+						img.icon(src="/img/right-arrow-icon-blue.svg")
+				.header-bottom-container
+					#scroll-down-button
+						p.text Scroll Down
+						img.icon(src="/img/right-arrow-icon-blue.svg")
+					#sm-container
+						a.social-media-button(href="https://github.com/JacksonL1787" target="_blank")
+							img.icon(src="/img/github-icon-white.svg" style="width: 30px; height: 30px;")
+						a.social-media-button(href="https://www.linkedin.com/in/jackson-lawrence" target="_blank")
+							img.icon(src="/img/linkedin-icon-white.svg" style="width: 24px; height: 24px; left: calc(50% + 1px);")
+					
+		#main
+			.about-me-container
+				.container-title-wrap
+					h1 About
+					.divider
+				.about-text-container
+					p.about-text Hello!
+					p.about-text My name is Jackson Lawrence, I am from San Mateo, California and have lived there for most of my life. I have worked as a freelance full-stack web developer for the last four years, creating websites for clubs, non-profit organizations, events, companies, individual clients, and more. I've mainly done freelancing work through Upwork and personal connections. 
+					p.about-text As I continue my journey to explore everything computer science has to offer, I'm always searching for ways to expand my knowledge in the realm of technology. In the middle of 2021, I will be moving to Boston, Massachusetts to pursue a BS in Computer Science and Business Administration at Northeastern University. Besides going to school, I'm always looking for new work in web development and design. Also, make sure to check out all my work down in the projects section of my portfolio!
+					.about-me-links-container
+						a.contact-me-link
+							svg(xmlns='http://www.w3.org/2000/svg' viewbox='0 0 32 32' width='512' height='512')
+								g#_18(fill='#fff' data-name='18')
+									path(d='M28.53,6.93l-.06,0A4,4,0,0,0,26,6H6a4,4,0,0,0-2.47.88l-.06,0A4,4,0,0,0,2,10V22a4,4,0,0,0,4,4H26a4,4,0,0,0,4-4V10A4,4,0,0,0,28.53,6.93ZM25.8,8l-8.66,6a2,2,0,0,1-2.28,0L6.2,8ZM28,22a2,2,0,0,1-2,2H6a2,2,0,0,1-2-2V10a1.88,1.88,0,0,1,.24-.92l9.48,6.56a4,4,0,0,0,4.56,0l9.48-6.56A1.88,1.88,0,0,1,28,10Z')
+							p.value Propose a Project
+						a.resume-link(target="_blank" href="/resume")
+							svg.icon(clip-rule='evenodd' fill-rule='evenodd' height='512' stroke-linejoin='round' stroke-miterlimit='2' viewbox='0 0 24 24' width='512' xmlns='http://www.w3.org/2000/svg' xmlns:svg='http://www.w3.org/2000/svg')
+								path(d='m10 7h-5c-1.657 0-3 1.343-3 3v4c0 1.657 1.343 3 3 3h5c.552 0 1-.448 1-1s-.448-1-1-1c0 0-2.931 0-5 0-.552 0-1-.448-1-1 0-1.222 0-2.778 0-4 0-.552.448-1 1-1h5c.552 0 1-.448 1-1s-.448-1-1-1zm4 10h5c1.657 0 3-1.343 3-3 0-1.222 0-2.778 0-4 0-1.657-1.343-3-3-3-2.069 0-5 0-5 0-.552 0-1 .448-1 1s.448 1 1 1h5c.552 0 1 .448 1 1v4c0 .552-.448 1-1 1-2.069 0-5 0-5 0-.552 0-1 .448-1 1s.448 1 1 1zm1-6h-6c-.552 0-1 .448-1 1s.448 1 1 1h6c.552 0 1-.448 1-1s-.448-1-1-1z')
+							p.value Check Out My Resume
+			.projects-container
+				.container-title-wrap
+					h1 Projects
+					.divider
+				.projects-content
+					.project
+						.more-info-button
+							.button-content
+								h2.project-title KoiStream
+								img.icon(src="/img/folder-icon-white.svg")
+						.overlay
+						img.project-splash-image(src="/img/test-project-image.png")
+					.project
+						.more-info-button
+							.button-content
+								h2.project-title KoiStream
+								img.icon(src="/img/folder-icon-white.svg")
+						.overlay
+						img.project-splash-image(src="/img/test-project-image.png")
+					.project
+						.more-info-button
+							.button-content
+								h2.project-title KoiStream
+								img.icon(src="/img/folder-icon-white.svg")
+						.overlay
+						img.project-splash-image(src="/img/test-project-image.png")
+					.project
+						.more-info-button
+							.button-content
+								h2.project-title KoiStream
+								img.icon(src="/img/folder-icon-white.svg")
+						.overlay
+						img.project-splash-image(src="/img/test-project-image.png")
+					.project
+						.more-info-button
+							.button-content
+								h2.project-title KoiStream
+								img.icon(src="/img/folder-icon-white.svg")
+						.overlay
+						img.project-splash-image(src="/img/test-project-image.png")
+					.project
+						.more-info-button
+							.button-content
+								h2.project-title KoiStream
+								img.icon(src="/img/folder-icon-white.svg")
+						.overlay
+						img.project-splash-image(src="/img/test-project-image.png")
+		#contact-me-container
+			.content-container
+				.description-container
+					h1.description-title Hire Me
+				.form-container
+					.flex-wrap
+						h1 Hello,
+						h1 my
+						h1 name
+						h1 is
+						.input-container
+							input.contact-name-input(placeholder="Full Name")
+						h1 and
+						h1 I
+						h1 have
+						h1 a
+						.input-container
+							input.contact-request-input(placeholder="Website, Job, Etc")
+						h1 that 
+						h1 I 
+						h1 need 
+						h1 help 
+						h1 with. 
+						h1 You 
+						h1 can 
+						h1 reach 
+						h1 me 
+						h1 at
+						.input-container
+							input.contact-email-input(placeholder="Email Address")
+						h1 to 
+						h1 get 
+						h1 started!
 	script(src="/js/index.js")
