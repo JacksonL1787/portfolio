@@ -13,7 +13,7 @@ body
 	position relative
 	.header-content
 		width calc(100% - 100px)
-		max-width 1700px
+		max-width 1600px
 		height 100%
 		margin 0 auto
 		position relative
@@ -113,7 +113,7 @@ body
 				&:hover
 					border-color #3d4c88
 					.icon
-						transform translateX(5px)
+						animation arrowMove .8s infinite
 				p
 					color #fff
 					font-size 1.05em
@@ -171,7 +171,7 @@ body
 
 #main
 	width calc(100% - 100px)
-	max-width 1700px
+	max-width 1600px
 	margin 200px auto
 	position relative
 	.container-title-wrap
@@ -290,80 +290,147 @@ body
 					transition opacity .3s
 				.project-splash-image
 					width 100%
-		
-#contact-me-container
-	background #070a17
+#contact-container
 	width 100%
-	padding 75px 0
-	.content-container
-		display flex
-		align-items center
-		justify-content center
-		width calc(100% - 100px)
-		.description-container
-			width 50%
-			.description-title
-				color #0043fe
-				font-size 4em
-				text-transform uppercase
-				line-height 100%
-				text-align center
-				letter-spacing .5px
-		.form-container
-			width 50%
-			min-width 900px
-			.flex-wrap
-				display flex
-				flex-flow row wrap
-				align-items center
-				max-width 725px
-				.input-container
-					height 100%
-					padding 2px 5px
-					margin 0 4px
-					transition padding .2s linear
-					&.active
-						//padding 0
-						input
-							padding 2px 5px
-							background #262b44
-							border-color transparent
+	background #0d1227
+	display flex
+	align-items center
+	height fit-content
+	position relative
+	.graphic-container
+		background #131933
+		width 45%
+		position absolute
+		height 100%
+		right 0
+		overflow hidden
+		.graphic-img
+			width 40%
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			z-index 2
+		.graphic-img-bg-elements
+			width 70%
+			position absolute
+			top 50%
+			left 50%
+			transform translate(-50%, -50%)
+			z-index 1
+			opacity 0.01
 
-					input
-						border none
-						background transparent
-						text-transform uppercase
-						font-size 1.3em
-						letter-spacing .5px
-						font-weight 600
-						outline none
-						padding 0
-						border-bottom 2px solid #62636d
-						border-top 2px solid transparent
-						color #fff
-						transition padding .2s linear, background .2s linear
-						&::placeholder
-							color #62636d
-						&.contact-name-input
-							width 300px
-						&.contact-request-input
-							width 450px
-						&.contact-email-input
-							width 375px
+	.form-container
+		width 55%
+		padding 60px 0
+		.form-content
+			width 85%
+			margin 0 auto
+			.title-container
 				h1
-					font-size 1.8em
-					word-wrap break-word
-					font-weight 500
-					line-height 250%
-					margin-right 6px
+					color #b8becc
+					font-size 1.2em
 					letter-spacing .5px
-					color #dbdce4
+					font-weight 500
+					line-height 100%
+					margin-bottom 20px
+				p
+					color #fff
+					font-size 2em
+					font-weight 500
+					letter-spacing .5px
+			.form-elements
+				width 100%
+				margin-top 35px
+				.input-container
+					width 100%
+					position relative
+					margin-bottom 30px
+					cursor text
+					&.active
+						.label
+							font-size 0.8em !important
+							top 8px !important
+							transform translateY(0) !important
+					input,
+					textarea
+						background #181f42
+						outline none
+						border none
+						border-bottom 2px solid #374480
+						font-size 1em
+						color #fff
+						z-index 2
+						width 100%
+						font-weight 500
+						letter-spacing .5px
+						padding 25px 15px 8px
+						transition border-color .3s
+						&:focus
+							border-color #0043fe
+						&:focus + .label
+							color #0043fe
+					textarea
+						resize none
+						height 150px
+						& + .label
+							top 25px
+							transform none
+					.label
+						color #7c86b3
+						z-index 1
+						font-size 1em
+						font-weight 500
+						position absolute
+						top calc(50% + 1px)
+						left 15px
+						transform translateY(-50%)
+						transition color .3s, transform .3s, top .3s, font-size .3s
+				.send-button
+					background #0043fe
+					width 150px
+					float right
+					border-radius 200px
+					display flex
+					align-items center
+					padding 12px 0
+					justify-content center
+					cursor pointer
+					transition background .3s
+					&:hover
+						background #0438ca
+					.value
+						color #fff
+						font-size 0.95em
+						font-weight 600
+						letter-spacing .5px
+						margin-right 8px
+					.icon
+						width 28px
+						height 28px
+#footer-container
+	width 100%
+	padding 50px 0
+	border-top 2px solid #202746
+	p
+		text-align center
+		color #b8becc
+		letter-spacing .5px
 
 
+					
 @keyframes arrowBounce
 	0%
-		transform rotate(90deg) translate(0)
+		transform rotate(90deg) translateX(0)
 	50%
-		transform rotate(90deg) translate(10px)
+		transform rotate(90deg) translateX(8px)
 	100%
-		transform rotate(90deg) translate(0)
+		transform rotate(90deg) translateX(0)
+
+@keyframes arrowMove
+	0%
+		transform translateX(0)
+	50%
+		transform translateX(8px)
+	100%
+		transform translateX(0)
